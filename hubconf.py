@@ -78,10 +78,13 @@ def _create(name, pretrained=True, channels=3, classes=80, autoshape=True, verbo
         raise Exception(s) from e
 
 
-def custom(path='path/to/model.pt', autoshape=True, _verbose=True, device=None):
+def custom(path='/home/chan/Documents/CSI4133/PoseDetection/yolov5/runs/train/exp/weights/best.pt', autoshape=True, _verbose=True, device=None):
     # YOLOv5 custom or local model
     return _create(path, autoshape=autoshape, verbose=_verbose, device=device)
 
+def pose(path='/home/chan/Documents/CSI4133/PoseDetection/yolov5/runs/train/exp11/weights/best.pt', autoshape=True, _verbose=True, device=None):
+    # YOLOv5 custom or local model
+    return _create(path, autoshape=autoshape, verbose=_verbose, device=device)
 
 def yolov5n(pretrained=True, channels=3, classes=80, autoshape=True, _verbose=True, device=None):
     # YOLOv5-nano model https://github.com/ultralytics/yolov5
